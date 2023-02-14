@@ -5,47 +5,83 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: _US_美国->🇫🇷_FR_法国, server: v140a.toddns.tk, port: 443, type: vmess, uuid: a25881f3-967f-3265-bc7f-9e66857b016b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /fr-111unlimitxxx, ws-headers: {Host: v140a.toddns.tk}, udp: true}
+  - {name: _US_美国, server: cdn.xia.me, port: 443, type: vmess, uuid: 68fe8d27-cbc8-4e72-90b7-70d3bb69dfd3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /api, ws-headers: {Host: us12.cachexy.ga}, udp: true}
+  - {name: _CN_中国->🇭🇰_HK_香港, server: 14.29.124.168, port: 31046, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
+  - {name: 联通一区(北京), server: 39.103.165.178, port: 50002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: _HK_香港, server: 47.243.183.124, port: 42093, type: vmess, uuid: 6bd6d540-ab4a-4ecf-98d6-1bd781a450c7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [47.243.183.124]}}, udp: true}
+  - {name: _US_美国->🇫🇷_FR_法国 2, server: eu-3.youngns.ml, port: 443, type: vmess, uuid: df69bf7b-7ad5-44d3-a4f0-203f347ed9d0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: eu-3.youngns.ml}, udp: true}
+  - {name: _US_美国 2, server: 172.67.185.133, port: 443, type: vmess, uuid: 44ceb389-4cea-4ea1-eef9-11ce6f3effe6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: us1.wanwusheng.me}, udp: true}
+  - {name: _CR_哥斯达黎加->🇫🇷_FR_法国, server: 190.93.246.4, port: 443, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /A2DJOPFT, ws-headers: {Host: lg10.cfcdn1.xyz}, udp: true}
+  - {name: _US_美国->🇷🇺_RU_俄罗斯联邦, server: els200.jslist.tk, port: 8443, type: vmess, uuid: e30cfa80-bc2c-43df-e808-97876aee77e2, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /wo.php, ws-headers: {Host: els200.jslist.tk}, udp: true}
+  - {name: _US_美国->🇫🇷_FR_法国 3, server: vmess.woiden.yuji2022.gq, port: 8880, type: vmess, uuid: 4b5e4565-322f-4223-a891-78a84f189726, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /E86414F638E11, ws-headers: {Host: vmess.woiden.yuji2022.gq}, udp: true}
   - {name: 俄罗斯联邦【付费推荐：https://v1.mk/vip】33, server: v12a.toddns.tk, port: 80, type: vmess, uuid: a25881f3-967f-3265-bc7f-9e66857b016b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /fr-111unlimitxxx, ws-headers: {Host: v12a.toddns.tk}, udp: true}
   - {name: 美国【付费推荐：https://v1.mk/vip】496, server: 129.146.113.254, port: 44107, type: vmess, uuid: fd84746b-24ed-449f-c53e-def4b90e122e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 129.146.113.254}, udp: true}
   - {name: 美国【付费推荐：https://v1.mk/vip】272, server: cf-lt-dns.sharecentre.online, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /shirker, ws-headers: {Host: nl.sharecentre.online}, udp: true}
   - {name: 美国【付费推荐：https://v1.mk/vip】568, server: uk-1.sharecentre.online, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /shirker, ws-headers: {Host: uk-1.sharecentre.online}, udp: true}
   - {name: 美国【付费推荐：https://v1.mk/vip】47, server: us.hugesport.xyz, port: 34597, type: trojan, password: SqMw9NkaW7, sni: us.hugesport.xyz, skip-cert-verify: true, udp: true}
-  - {name: 印度【付费推荐：https://v1.mk/vip】23, server: vin1.0bad.com, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /chat, ws-headers: {Host: vin1.0bad.com}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - _US_美国->🇫🇷_FR_法国
+      - _US_美国
+      - _CN_中国->🇭🇰_HK_香港
+      - 联通一区(北京)
+      - _HK_香港
+      - _US_美国->🇫🇷_FR_法国 2
+      - _US_美国 2
+      - _CR_哥斯达黎加->🇫🇷_FR_法国
+      - _US_美国->🇷🇺_RU_俄罗斯联邦
+      - _US_美国->🇫🇷_FR_法国 3
       - 俄罗斯联邦【付费推荐：https://v1.mk/vip】33
       - 美国【付费推荐：https://v1.mk/vip】496
       - 美国【付费推荐：https://v1.mk/vip】272
       - 美国【付费推荐：https://v1.mk/vip】568
       - 美国【付费推荐：https://v1.mk/vip】47
-      - 印度【付费推荐：https://v1.mk/vip】23
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - _US_美国->🇫🇷_FR_法国
+      - _US_美国
+      - _CN_中国->🇭🇰_HK_香港
+      - 联通一区(北京)
+      - _HK_香港
+      - _US_美国->🇫🇷_FR_法国 2
+      - _US_美国 2
+      - _CR_哥斯达黎加->🇫🇷_FR_法国
+      - _US_美国->🇷🇺_RU_俄罗斯联邦
+      - _US_美国->🇫🇷_FR_法国 3
       - 俄罗斯联邦【付费推荐：https://v1.mk/vip】33
       - 美国【付费推荐：https://v1.mk/vip】496
       - 美国【付费推荐：https://v1.mk/vip】272
       - 美国【付费推荐：https://v1.mk/vip】568
       - 美国【付费推荐：https://v1.mk/vip】47
-      - 印度【付费推荐：https://v1.mk/vip】23
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - _US_美国->🇫🇷_FR_法国
+      - _US_美国
+      - _CN_中国->🇭🇰_HK_香港
+      - 联通一区(北京)
+      - _HK_香港
+      - _US_美国->🇫🇷_FR_法国 2
+      - _US_美国 2
+      - _CR_哥斯达黎加->🇫🇷_FR_法国
+      - _US_美国->🇷🇺_RU_俄罗斯联邦
+      - _US_美国->🇫🇷_FR_法国 3
       - 俄罗斯联邦【付费推荐：https://v1.mk/vip】33
       - 美国【付费推荐：https://v1.mk/vip】496
       - 美国【付费推荐：https://v1.mk/vip】272
       - 美国【付费推荐：https://v1.mk/vip】568
       - 美国【付费推荐：https://v1.mk/vip】47
-      - 印度【付费推荐：https://v1.mk/vip】23
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -64,51 +100,89 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - _US_美国->🇫🇷_FR_法国
+      - _US_美国
+      - _CN_中国->🇭🇰_HK_香港
+      - 联通一区(北京)
+      - _HK_香港
+      - _US_美国->🇫🇷_FR_法国 2
+      - _US_美国 2
+      - _CR_哥斯达黎加->🇫🇷_FR_法国
+      - _US_美国->🇷🇺_RU_俄罗斯联邦
+      - _US_美国->🇫🇷_FR_法国 3
       - 俄罗斯联邦【付费推荐：https://v1.mk/vip】33
       - 美国【付费推荐：https://v1.mk/vip】496
       - 美国【付费推荐：https://v1.mk/vip】272
       - 美国【付费推荐：https://v1.mk/vip】568
       - 美国【付费推荐：https://v1.mk/vip】47
-      - 印度【付费推荐：https://v1.mk/vip】23
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - _CN_中国->🇭🇰_HK_香港
+      - _HK_香港
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - _US_美国->🇫🇷_FR_法国
+      - _US_美国
+      - _CN_中国->🇭🇰_HK_香港
+      - 联通一区(北京)
+      - _HK_香港
+      - _US_美国->🇫🇷_FR_法国 2
+      - _US_美国 2
+      - _CR_哥斯达黎加->🇫🇷_FR_法国
+      - _US_美国->🇷🇺_RU_俄罗斯联邦
+      - _US_美国->🇫🇷_FR_法国 3
       - 俄罗斯联邦【付费推荐：https://v1.mk/vip】33
       - 美国【付费推荐：https://v1.mk/vip】496
       - 美国【付费推荐：https://v1.mk/vip】272
       - 美国【付费推荐：https://v1.mk/vip】568
       - 美国【付费推荐：https://v1.mk/vip】47
-      - 印度【付费推荐：https://v1.mk/vip】23
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - _US_美国->🇫🇷_FR_法国
+      - _US_美国
+      - _CN_中国->🇭🇰_HK_香港
+      - 联通一区(北京)
+      - _HK_香港
+      - _US_美国->🇫🇷_FR_法国 2
+      - _US_美国 2
+      - _CR_哥斯达黎加->🇫🇷_FR_法国
+      - _US_美国->🇷🇺_RU_俄罗斯联邦
+      - _US_美国->🇫🇷_FR_法国 3
       - 俄罗斯联邦【付费推荐：https://v1.mk/vip】33
       - 美国【付费推荐：https://v1.mk/vip】496
       - 美国【付费推荐：https://v1.mk/vip】272
       - 美国【付费推荐：https://v1.mk/vip】568
       - 美国【付费推荐：https://v1.mk/vip】47
-      - 印度【付费推荐：https://v1.mk/vip】23
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - _US_美国->🇫🇷_FR_法国
+      - _US_美国
+      - _CN_中国->🇭🇰_HK_香港
+      - 联通一区(北京)
+      - _HK_香港
+      - _US_美国->🇫🇷_FR_法国 2
+      - _US_美国 2
+      - _CR_哥斯达黎加->🇫🇷_FR_法国
+      - _US_美国->🇷🇺_RU_俄罗斯联邦
+      - _US_美国->🇫🇷_FR_法国 3
       - 俄罗斯联邦【付费推荐：https://v1.mk/vip】33
       - 美国【付费推荐：https://v1.mk/vip】496
       - 美国【付费推荐：https://v1.mk/vip】272
       - 美国【付费推荐：https://v1.mk/vip】568
       - 美国【付费推荐：https://v1.mk/vip】47
-      - 印度【付费推荐：https://v1.mk/vip】23
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -124,12 +198,21 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - _US_美国->🇫🇷_FR_法国
+      - _US_美国
+      - _CN_中国->🇭🇰_HK_香港
+      - 联通一区(北京)
+      - _HK_香港
+      - _US_美国->🇫🇷_FR_法国 2
+      - _US_美国 2
+      - _CR_哥斯达黎加->🇫🇷_FR_法国
+      - _US_美国->🇷🇺_RU_俄罗斯联邦
+      - _US_美国->🇫🇷_FR_法国 3
       - 俄罗斯联邦【付费推荐：https://v1.mk/vip】33
       - 美国【付费推荐：https://v1.mk/vip】496
       - 美国【付费推荐：https://v1.mk/vip】272
       - 美国【付费推荐：https://v1.mk/vip】568
       - 美国【付费推荐：https://v1.mk/vip】47
-      - 印度【付费推荐：https://v1.mk/vip】23
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
